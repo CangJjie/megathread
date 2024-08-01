@@ -5,11 +5,16 @@ title: Início
 hero:
   name: privateersclub/wiki
   tagline: Bem-vindo(a) ao wiki de pirataria de jogos mais abrangente da Internet.
+  image: 
+    src: /home.png
+    alt: privateersclub
   actions:
     - text: Começar
       link: /br/glossary
     - text: Contribuir
-      link: /contribute
+      link: /br/contribute
+    - text: Traduções
+      link: /_translations
 
 features:
   - icon: ✏️
@@ -17,8 +22,12 @@ features:
     details: Nosso wiki é ativamente mantido pelos membros dedicados de nossa comunidade.
   - icon: 🌐
     title: Traduções
-    details: O wiki é elegantemente traduzido para várias línguas, garantindo que você possa explorar seu conteúdo com facilidade e conforto máximos!
+    details:
+      O wiki é elegantemente traduzido para várias línguas, garantindo que você possa explorar seu
+      conteúdo com facilidade e conforto máximos!
   - icon: 🌟
     title: Escolhas Favoritas
-    details: Regularmente selecionamos os melhores sites para você e enfatizamos sua importância, para que você possa ficar tranquilo(a).
+    details:
+      Regularmente selecionamos os melhores sites para você e enfatizamos sua importância, para que
+      você possa ficar tranquilo(a).
 ---

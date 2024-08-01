@@ -4,42 +4,33 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --log-level=warn --write .",
+    "format": "prettier --cache --write docs/",
+    "build": "pnpm run docs:build && pnpm run i18n:build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "docs:preview": "vitepress preview docs",
-    "lunaria:build": "lunaria build",
-    "lunaria:preview": "lunaria preview",
+    "i18n:build": "lunaria build",
+    "i18n:preview": "lunaria preview",
     "og:dev": "x-satori -t ./docs/.vitepress/hooks/Template.vue -c ./docs/.vitepress/hooks/satoriConfig.ts --dev"
   },
   "license": "Unlicense",
   "devDependencies": {
-    "@types/node": "^20.11.17",
+    "@iconify-json/logos": "^1.1.43",
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.2.2",
+    "@nolebase/vitepress-plugin-git-changelog": "^2.2.2",
+    "@nolebase/vitepress-plugin-page-properties": "^2.2.2",
+    "@types/node": "^20.14.11",
     "@types/nprogress": "^0.2.3",
-    "prettier": "^3.2.5",
-    "vitepress": "1.0.0-rc.42"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search"
-      ]
-    }
+    "prettier": "^3.3.3",
+    "vitepress": "npm:@taskylizard/vitepress@1.1.1"
   },
   "dependencies": {
-    "@lunariajs/core": "^0.0.28",
-    "@resvg/resvg-js": "^2.6.0",
-    "gray-matter": "^4.0.3",
-    "mdast-util-toc": "^7.0.0",
+    "@lunariajs/core": "^0.1.1",
+    "@resvg/resvg-js": "^2.6.2",
     "nprogress": "^0.2.0",
-    "pathe": "^1.1.2",
-    "remark": "^15.0.1",
-    "remark-parse": "^11.0.0",
-    "unified": "^11.0.4",
-    "unist-util-visit": "^5.0.0",
-    "unocss": "^0.58.5",
-    "vue": "^3.4.18",
+    "unocss": "^0.61.5",
+    "vue": "^3.4.33",
     "x-satori": "^0.1.5"
   }
 }

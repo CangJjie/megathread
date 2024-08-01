@@ -1,47 +1,40 @@
-<script setup lang="ts">
-defineProps<{ title: string; description?: string }>();
+<script lang="ts" setup>
+defineProps<{ title: string; description?: string }>()
 </script>
 
 <template>
-  <div
-    tw="w-full h-full bg-black flex flex-col"
+  <span
     style="
-      background-image: linear-gradient(
-        45deg,
-        rgb(14, 14, 25) 0%,
-        rgb(29, 33, 43) 19%,
-        rgb(47, 53, 63) 27%,
-        rgb(71, 84, 97) 34%,
-        rgb(101, 122, 133) 41%,
-        rgb(136, 163, 170) 47%,
-        rgb(167, 188, 185) 53%,
-        rgb(192, 203, 191) 59%,
-        rgb(216, 214, 199) 66%,
-        rgb(236, 223, 202) 73%,
-        rgb(248, 231, 203) 81%,
-        rgb(255, 238, 204) 100%
+      background-image: radial-gradient(
+        100% 100% at 50% 100%,
+        #1fd8a4 0%,
+        rgba(58, 221, 198, 0.75) 25%,
+        rgba(78, 227, 226, 0.5) 50%,
+        rgba(190, 227, 248, 0) 100%
       );
     "
+    tw="w-full h-full bg-black flex-col"
   >
-    <div
+    <span
       tw="p-10 w-full min-h-0 grow flex flex-col items-center justify-between"
     >
-      <div tw="w-full flex justify-between items-center text-5xl font-medium">
-        <div tw="flex items-center">
-          <div tw="text-zinc-100 ml-2 mt-1 font-semibold">
+      <span tw="w-full flex justify-between items-center text-5xl font-medium">
+        <span tw="flex items-center">
+          <img tw="h-22 w-22" src="https://megathread.pages.dev/logo.png" />
+
+          <span tw="text-gray-200 ml-2 mt-1 font-semibold">
             the privateersclub wiki
-          </div>
-        </div>
-      </div>
-      <div tw="w-full pr-56 flex flex-col items-start justify-end">
-        <div style="color: #eeeeee" tw="text-6xl font-bold" v-html="title" />
-        <div
-          style="color: #adf0dd; text-decoration-style: dotted"
-          tw="mt-2 text-4xl underline"
+          </span>
+        </span>
+      </span>
+      <span tw="w-full pr-56 flex flex-col items-start justify-end">
+        <span tw="text-6xl text-gray-200 font-bold" v-html="title" />
+        <span
+          v-if="description"
+          tw="mt-2 text-gray-200 text-4xl"
           v-html="description"
         />
-      </div>
-    </div>
-    <div tw="shrink-0 h-4 w-full flex" style="background-color: #adf0dd" />
-  </div>
+      </span>
+    </span>
+  </span>
 </template>
